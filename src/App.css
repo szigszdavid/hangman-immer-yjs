@@ -1,0 +1,20 @@
+span {
+  margin-left: 5px;
+}
+
+#toBeGuessedDiv {
+  margin-bottom: 10px;
+}
+
+#featureButtonsDiv, #mistakesDiv {
+  margin: 10px;
+  margin-left: 0;
+}
+
+.lost {
+  color: red;
+}
+
+.won {
+  color: green;
+}
