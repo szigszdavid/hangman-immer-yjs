@@ -1,5 +1,4 @@
 import { bind } from "immer-yjs";
-import { useSyncExternalStore } from "use-sync-external-store/shim";
 
 let configurationBinder
 
@@ -24,6 +23,7 @@ export function initConfigurationStore() {
 }
 
 export function addClient(clientID) {
+  sessionStorage.setItem("playerId", JSON.stringify(clientID))
   configurationBinder.update((draft) => {
     draft.clients.push(clientID);
   });

@@ -12,7 +12,7 @@ export function useGameImmerYjs() {
   return [selection, gameBinder.update];
 }
 
-export function creategameBinder(yStore) {
+export function createGameBinder(yStore) {
   gameBinder = bind(yStore)
 }
 

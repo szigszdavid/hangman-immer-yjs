@@ -1,11 +1,12 @@
 import HangmanGame from "./HangmanGame";
-import ImmerMultiplayerComponent from "./components/MultiplayerComponentFunctional";
+import ImmerMultiplayerComponent from "./components/ImmerMultiplayerComponent";
 import { initialGameState } from "./state/gameState";
+import { initalRoundsState } from "./state/rounds";
 
 const App = () => {
   
   return (
-    <ImmerMultiplayerComponent initialGameState={initialGameState}>
+    <ImmerMultiplayerComponent initialGameState={initialGameState} initialRoundsState={initalRoundsState}>
       <HangmanGame />
     </ImmerMultiplayerComponent>
   );

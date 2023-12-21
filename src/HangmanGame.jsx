@@ -6,6 +6,7 @@ import MistakeCounter from "./components/MistakeCounter";
 import { useCallback } from "react";
 import { useGameImmerYjs } from "./state/game";
 import { answers } from "./state/gameState";
+import { isCurrentPlayer, nextPlayer } from "./state/rounds";
 
 export default function HangmanGame() {
   const [game, setGame] = useGameImmerYjs();
@@ -15,7 +16,11 @@ export default function HangmanGame() {
   }, []);
 
   const handleLetterButtonOnClick = useCallback((e) => {
-    guess(e);
+    if (isCurrentPlayer()) {
+      guess(e);
+
+      nextPlayer()
+    }
   }, []);
 
   const guess = useCallback((letter) => {
