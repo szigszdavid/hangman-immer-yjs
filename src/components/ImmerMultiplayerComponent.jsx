@@ -125,12 +125,6 @@ export default function ImmerMultiplayerComponent(props) {
     }
   }, [clientId, synced]);
 
-  useEffect(() => {
-    if (clientId && synced) {
-      addClient(clientId);
-    }
-  }, [synced, clientId]);
-
   return (
     <>
       {roomId === null ? (
